@@ -9,6 +9,8 @@ This is a synthetic portfolio project. It contains no client code, customer data
 
 **[Open the live demo](https://purungus.github.io/ai-agent-reliability-lab/)**
 
+![AI Agent Reliability Lab interactive evaluation](docs/demo.png)
+
 ## Problem
 
 Conversational systems can sound confident while using stale, ambiguous, or user-supplied information as truth. This lab demonstrates a stricter operating model:
