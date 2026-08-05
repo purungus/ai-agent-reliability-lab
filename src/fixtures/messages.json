@@ -1,0 +1,178 @@
+[
+  {
+    "message_id": "msg_01",
+    "text": "Tenés iPhone 13 Pro Max 256 azul?",
+    "expected_intents": ["stock_availability"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 13 Pro Max", "storage": "256GB", "color": "Azul" },
+    "expected_match_type": "exact",
+    "expected_decision": "CONFIRMED",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [{ "intent": "stock_availability", "product_id": "iphone_13pm_256_azul" }],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_02",
+    "text": "Precio del iPhone 14 Pro 128 negro?",
+    "expected_intents": ["price_question"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 14 Pro", "storage": "128GB", "color": "Negro" },
+    "expected_match_type": "exact",
+    "expected_decision": "CONFIRMED",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [{ "intent": "price_question", "product_id": "iphone_14pro_128_negro" }],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_03",
+    "text": "Tenés iPhone 13?",
+    "expected_intents": ["stock_availability"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 13" },
+    "expected_match_type": "ambiguous",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_04",
+    "text": "Tenés Samsung S25 Ultra?",
+    "expected_intents": ["stock_availability"],
+    "expected_entities": { "brand": "Samsung", "model": "S25 Ultra" },
+    "expected_match_type": "not_found",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_05",
+    "text": "Aceptás permuta?",
+    "expected_intents": ["trade_in_question"],
+    "expected_entities": {},
+    "expected_match_type": "not_required",
+    "expected_decision": "BLOCK",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "trade_in_question" }]
+  },
+  {
+    "message_id": "msg_06",
+    "text": "Se puede pagar en cuotas?",
+    "expected_intents": ["installments_question"],
+    "expected_entities": {},
+    "expected_match_type": "not_required",
+    "expected_decision": "BLOCK",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "installments_question" }]
+  },
+  {
+    "message_id": "msg_07",
+    "text": "Me reservás uno?",
+    "expected_intents": ["reservation_question"],
+    "expected_entities": {},
+    "expected_match_type": "not_required",
+    "expected_decision": "BLOCK",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "reservation_question" }]
+  },
+  {
+    "message_id": "msg_08",
+    "text": "Tenés entrega hoy?",
+    "expected_intents": ["delivery_question"],
+    "expected_entities": {},
+    "expected_match_type": "not_required",
+    "expected_decision": "BLOCK",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "delivery_question" }]
+  },
+  {
+    "message_id": "msg_09",
+    "text": "Me pasás catálogo?",
+    "expected_intents": ["catalog_question"],
+    "expected_entities": {},
+    "expected_match_type": "not_required",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_10",
+    "text": "asdf no entiendo nada",
+    "expected_intents": ["unknown"],
+    "expected_entities": {},
+    "expected_match_type": "not_required",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_11",
+    "text": "Me habían dicho que el 13 Pro Max estaba a 500, confirmás?",
+    "expected_intents": ["price_question"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 13 Pro Max" },
+    "expected_match_type": "exact",
+    "expected_decision": "CONFIRMED",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [{ "intent": "price_question", "product_id": "iphone_13pm_256_azul" }],
+    "expected_blocked_claims": [{ "intent": "price_question", "reason": "customer_input_not_truth" }]
+  },
+  {
+    "message_id": "msg_12",
+    "text": "Tenés el 13 azul y hacés cuotas?",
+    "expected_intents": ["stock_availability", "installments_question"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 13", "color": "Azul" },
+    "expected_match_type": "exact",
+    "expected_decision": "BLOCK",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [{ "intent": "stock_availability", "product_id": "iphone_13_128_azul" }],
+    "expected_blocked_claims": [{ "intent": "installments_question" }]
+  },
+  {
+    "message_id": "msg_13",
+    "text": "Tenés iPhone 15 128?",
+    "expected_intents": ["stock_availability"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 15", "storage": "128GB" },
+    "expected_match_type": "not_found",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": false,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": []
+  },
+  {
+    "message_id": "msg_14",
+    "text": "Tenés el iPhone 12 128 negro?",
+    "expected_intents": ["stock_availability"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 12", "storage": "128GB", "color": "Negro" },
+    "expected_match_type": "exact",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "stock_availability", "product_id": "iphone_12_128_negro", "reason": "stock_vencido" }]
+  },
+  {
+    "message_id": "msg_15",
+    "text": "Cuánto sale el iPhone 11 64?",
+    "expected_intents": ["price_question"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 11", "storage": "64GB" },
+    "expected_match_type": "exact",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "price_question", "product_id": "iphone_11_64_negro", "reason": "price_vencido" }]
+  },
+  {
+    "message_id": "msg_16",
+    "text": "Tenés el iPhone 14 256 blanco?",
+    "expected_intents": ["stock_availability"],
+    "expected_entities": { "brand": "Apple", "model": "iPhone 14", "storage": "256GB", "color": "Blanco" },
+    "expected_match_type": "exact",
+    "expected_decision": "SAFE_PARTIAL",
+    "expected_handoff_required": true,
+    "expected_confirmed_claims": [],
+    "expected_blocked_claims": [{ "intent": "stock_availability", "product_id": "iphone_14_256_blanco", "reason": "stock_unknown" }]
+  }
+]
